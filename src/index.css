@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--sapBackgroundColor);
+  font-family: var(--sapFontFamily);
+}
+
+.bar::part(startContent) {
+  width: 100%;
+  box-sizing: border-box;
+}
