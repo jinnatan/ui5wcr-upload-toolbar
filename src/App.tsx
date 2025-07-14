@@ -1,6 +1,7 @@
 
 import FCLLayout from '@ui5/webcomponents-fiori/dist/types/FCLLayout.js';
-import { Bar, Breadcrumbs, BreadcrumbsItem, Button, DynamicPage, DynamicPageHeader, DynamicPageTitle, FileUploader, FlexBox, FlexibleColumnLayout, Label, MessageStrip, ObjectStatus, Tag, Title, Toolbar, ToolbarButton } from '@ui5/webcomponents-react';
+import { Bar, Breadcrumbs, BreadcrumbsItem, Button, DatePicker, DynamicPage, DynamicPageHeader, DynamicPageTitle, FileUploader, FlexBox, FlexibleColumnLayout, Input, Label, MessageStrip, ObjectStatus, Switch, Tag, Title, ToolbarButton } from '@ui5/webcomponents-react';
+import { Toolbar } from '@ui5/webcomponents-react-compat/dist/components/Toolbar/index.js';
 
 function App() {
 
@@ -8,33 +9,48 @@ function App() {
 
   const exportButton = () => {
     return (
-      <ToolbarButton
+      // <ToolbarButton
+      //   design="Emphasized"
+      //   text="Export"
+      // ></ToolbarButton>
+
+      <Button
         design="Emphasized"
-        //   onClick={onExport}
-        text="Export"
-      ></ToolbarButton>
+      >Export</Button>
     );
   };
 
   const resetButton = () => {
     return (
-      <ToolbarButton
-        design="Transparent"
-        // onClick={onReset}
-        text="Reset to default"
-      ></ToolbarButton>
+      // <ToolbarButton
+      //   design="Transparent"
+      //   text="Reset to default"
+      // ></ToolbarButton>
+
+      <Button
+        design="Emphasized"
+      >Reset to default </Button>
     );
   };
 
   const uploadButton = () => {
+    // return (
+    //   <FileUploader
+    //     hideInput
+    //     valueState="None"
+    //     accept=".json"
+    //   >
+    //     <ToolbarButton design="Default" text="Import Json File"></ToolbarButton>
+    //   </FileUploader>
+    // );
+
     return (
       <FileUploader
         hideInput
-        // onChange={handleFileChange}
         valueState="None"
         accept=".json"
       >
-        <ToolbarButton design="Default" text="Import Json File"></ToolbarButton>
+        <Button design="Default" >Import Json File</Button>
       </FileUploader>
     );
   };
@@ -92,6 +108,7 @@ function App() {
                 <BreadcrumbsItem>Page 4</BreadcrumbsItem>
                 <BreadcrumbsItem>Page 5</BreadcrumbsItem>
               </Breadcrumbs>
+
             }
             heading={
               <Title
@@ -144,6 +161,53 @@ function App() {
   const displayMiddleColumn = () => {
     return <></>;
   };
+
+  const displayToolbar = () => {
+    return (
+
+      <Toolbar
+        design="Auto"
+        onClick={function Xs() { }}
+        onOverflowChange={function Xs() { }}
+        toolbarStyle="Standard"
+      >
+
+        <Button
+          data-accessible-name
+          design="Transparent"
+        >
+          Button One
+        </Button>
+        <Button
+          data-accessible-name
+          design="Transparent"
+        >
+          Button two
+        </Button>
+        <Button
+          data-accessible-name
+          design="Transparent"
+        >
+          Button three
+        </Button>
+        <Button
+          data-accessible-name
+          design="Transparent"
+        >
+          Button four
+        </Button>
+        <Button
+          data-accessible-name
+          design="Transparent"
+        >
+          Button Two
+        </Button>
+        <Input data-accessible-name />
+        <DatePicker data-accessible-name />
+        <Switch data-accessible-name />
+      </Toolbar>
+    )
+  }
 
   return (
     <FlexibleColumnLayout

@@ -13,10 +13,11 @@
   },
   "dependencies": {
     "@ui5/webcomponents": "2.12.0",
-    "@ui5/webcomponents-fiori": "2.12.0",
     "@ui5/webcomponents-base": "2.12.0",
+    "@ui5/webcomponents-fiori": "2.12.0",
     "@ui5/webcomponents-icons": "2.12.0",
     "@ui5/webcomponents-react": "2.12.0",
+    "@ui5/webcomponents-react-compat": "^2.12.0",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },
